@@ -25,7 +25,7 @@ namespace Vuforia
 		#endregion // PRIVATE_MEMBER_VARIABLES
 
 		public GameObject myCanvas;
-
+		public string name;
 
 
 		#region UNTIY_MONOBEHAVIOUR_METHODS
