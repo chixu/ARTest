@@ -63,4 +63,9 @@ public class GeneralARUIController : MonoBehaviour {
 		this.uiCanvas.gameObject.SetActive (_show);
 	}
 
+	public void SetFakeNumber(float _number){
+		Text txt = this.btnClose.GetComponentInChildren<Text> ();
+		txt.text = _number.ToString ();
+	}
+
 }

@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class XueGuanController : MonoBehaviour {
 
+	public bool showDongMai = true;
+	public bool showJingMai = true;
+
 	public List<GameObject> dongmaiGOs;
 	public List<GameObject> jingmaiGOs;
 
@@ -29,9 +32,9 @@ public class XueGuanController : MonoBehaviour {
 		}); 
 	}
 
-	void Start(){
-		ShowDongMai (false);
-		ShowJingMai (true);
+	void OnEnable(){
+		ShowDongMai (showDongMai);
+		ShowJingMai (showJingMai);
 	}
 
 	public void OnBtnClick(GameObject sender){

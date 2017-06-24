@@ -32,6 +32,11 @@ public class TouchRotate : MonoBehaviour {
 	public float maximumYAngle = 0;
 	public bool isLocal = true;
 
+	public float maximumScale = 3.0f;
+	public float minimumScale = 0.5f;
+
+	private float accumulateScale = 1.0f;
+
 	private float accumulateXAngle = 0;
 	private float accumulateYAngle = 0;
 
@@ -53,13 +58,21 @@ public class TouchRotate : MonoBehaviour {
 		this.transform.localPosition = originalPosition;
 		this.transform.localScale = originalScale;
 
+		ResetParameters ();
+	}
+
+	void ResetParameters(){
+	
+		accumulateScale = 1.0f;
+		accumulateXAngle = 0f;
+		accumulateYAngle = 0f;
+		lastDist = 0;
 	}
 
 	void Update () 
 	{
-
+		
 		if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved) 
-
 		{
 
 			//One finger touch does orbit
@@ -93,73 +106,63 @@ public class TouchRotate : MonoBehaviour {
 				}
 			}
 
-			Vector3 rotateAngle = new Vector3(y,x,0);
-
-
 			if (isLocal) {
-				transform.Rotate (rotateAngle, Space.Self);
+				Vector3 rotateAngle = new Vector3(-y,x,0);
+
+				transform.Rotate (new Vector3(0,x,0), Space.Self);
+				transform.Rotate (new Vector3(y,0,0), Space.World);
+
+
 			} else {
+				Vector3 rotateAngle = new Vector3(y,x,0);
 				transform.Rotate (rotateAngle, Space.World);
 			}
 
+
 		}
 
-		/*if (Input.touchCount > 1 && (Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(1).phase == TouchPhase.Moved)) 
+		if (Input.touchCount <= 1) {
+			lastDist = 0;
+		}
 
+		if (Input.touchCount > 1 && (Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(1).phase == TouchPhase.Moved)) 
 		{
-
-			//Two finger touch does pinch to zoom
-
-			var touch1 = Input.GetTouch(0);t
+			var touch1 = Input.GetTouch(0);
 
 			var touch2 = Input.GetTouch(1);
 
 			curDist = Vector2.Distance(touch1.position, touch2.position);
+			if (lastDist != 0) {
+				
+				float distDiff = curDist - lastDist;
+				float distDiffRatio = curDist / lastDist;
 
-			if(curDist > lastDist)
+				if(curDist > lastDist)
+				{
+					//distance += Vector2.Distance(touch1.deltaPosition, touch2.deltaPosition)*pinchSpeed/10;
 
-			{
+				}else{
 
-				distance += Vector2.Distance(touch1.deltaPosition, touch2.deltaPosition)*pinchSpeed/10;
+					//distance -= Vector2.Distance(touch1.deltaPosition, touch2.deltaPosition)*pinchSpeed/10;
+				}
 
-			}else{
+				accumulateScale *= distDiffRatio;
 
-				distance -= Vector2.Distance(touch1.deltaPosition, touch2.deltaPosition)*pinchSpeed/10;
+				if (accumulateScale >= maximumScale) {
+					accumulateScale = maximumScale;
+				} else if (accumulateScale <= minimumScale) {
+					accumulateScale = minimumScale;
+				}
+
+				this.transform.localScale = this.originalScale * accumulateScale;
 
 			}
-
-
-
+			
 			lastDist = curDist;
-
-		}*/
-
-
-		if(distance <= minimumDistance)
-
-		{
-
-			//minimum camera distance
-
-			distance = minimumDistance;
-
+			
+			//this.transform.localScale = new Vector3 (distance, distance, distance);
 		}
-
-
-
-		if(distance >= maximumDistance)
-
-		{
-
-			//maximum camera distance
-
-			distance = maximumDistance;
-
-		}
-
-
-
-
+		//GeneralARUIController.inst.SetFakeNumber (accumulateScale);
 		//Sets rotation
 
 		//var rotation = Quaternion.Euler(y, -x, 0);
