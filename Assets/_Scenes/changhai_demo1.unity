@@ -4392,7 +4392,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8FD9\u662F\u4E00\u9897\u5170\u82B1\u8349\uFF0C\u751F\u957F\u9002\u6E29\u4E3A10-20\u2103\u3002"
+  m_Text: 
 --- !u!222 &677673551
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4512,10 +4512,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 706173728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a9ab6d3ab842148b494bc470cca5af, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f9e4e5d66af2e0469f7d38cf90a9b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &706173730
+  playFullscreen: 0
+--- !u!114 &706173731
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4523,9 +4524,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 706173728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8367ef736a6ce4fb9acd9701bd2df5d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c070bb81678f594383230ccf05bf1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothingFrames: 5
 --- !u!1 &706408667
 GameObject:
   m_ObjectHideFlags: 0
@@ -6235,7 +6237,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8FD9\u662F\u4E00\u9897\u5170\u82B1\u8349\uFF0C\u751F\u957F\u9002\u6E29\u4E3A10-20\u2103\u3002"
+  m_Text: 
 --- !u!222 &1008117579
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7609,7 +7611,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: jingmai_quanshenMaterial
+  m_Name: heart_model_vesselMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -10769,7 +10771,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8FD9\u662F\u4E00\u9897\u5170\u82B1\u8349\uFF0C\u751F\u957F\u9002\u6E29\u4E3A10-20\u2103\u3002"
+  m_Text: 
 --- !u!222 &1820897116
 CanvasRenderer:
   m_ObjectHideFlags: 0
