@@ -96,7 +96,7 @@ namespace Vuforia
 		#region PRIVATE_METHODS
 
 
-		private void OnTrackingFound()
+		virtual protected void OnTrackingFound()
 		{
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
