@@ -25,6 +25,7 @@ namespace Vuforia
 		#endregion // PRIVATE_MEMBER_VARIABLES
 
 		public GameObject myCanvas;
+		public GameObject xueguan;
 		public string name;
 
 
@@ -126,6 +127,9 @@ namespace Vuforia
 				ca.gameObject.SetActive (true);
 			}
 
+			if (xueguan) {
+				xueguan.SetActive (true);
+			}
 
 			if (myCanvas) {
 				myCanvas.SetActive (true);
@@ -173,6 +177,10 @@ namespace Vuforia
 
 			if (myCanvas) {
 				myCanvas.SetActive (false);
+			}
+
+			if (xueguan) {
+				xueguan.SetActive (false);
 			}
 
 			if (touchRotate) {

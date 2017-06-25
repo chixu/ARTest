@@ -2025,6 +2025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCanvas: {fileID: 0}
+  xueguan: {fileID: 0}
   name: 
 --- !u!1001 &298396880
 Prefab:
@@ -2387,6 +2388,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 377845363}
+--- !u!1 &415246370 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1852552543516660, guid: a08b1da9fb7ba974a9dd0387b7f75605,
+    type: 2}
+  m_PrefabInternal: {fileID: 298396880}
 --- !u!1 &444048567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,6 +3797,11 @@ MonoBehaviour:
   waitTimes:
   - 2
   - 0.4
+--- !u!1 &607776479 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1852552543516660, guid: a08b1da9fb7ba974a9dd0387b7f75605,
+    type: 2}
+  m_PrefabInternal: {fileID: 2034217560}
 --- !u!1 &616992402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,6 +3946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCanvas: {fileID: 0}
+  xueguan: {fileID: 0}
   name: 
 --- !u!1 &648824519
 GameObject:
@@ -5334,6 +5346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCanvas: {fileID: 0}
+  xueguan: {fileID: 0}
   name: 
 --- !u!1 &872616727
 GameObject:
@@ -7630,7 +7643,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: heart_model_vesselMaterial
+  m_Name: jingmai_quanshenMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -9509,6 +9522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCanvas: {fileID: 1635148959}
+  xueguan: {fileID: 607776479}
   name: xueguan
 --- !u!1 &1582663125
 GameObject:
@@ -10484,6 +10498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCanvas: {fileID: 93436381}
+  xueguan: {fileID: 415246370}
   name: xueguan
 --- !u!1 &1785171416
 GameObject:
@@ -11940,6 +11955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCanvas: {fileID: 148346515}
+  xueguan: {fileID: 0}
   name: 
 --- !u!1001 &2034217560
 Prefab:
