@@ -15,11 +15,30 @@ namespace Vuforia
 	public class VideoTrackableHandler : MyArDemoTrackableHandler,
 	ITrackableEventHandler
 	{	
+//		public string videoName = "";
+
 		override protected void OnTrackingFound()
 		{
 			base.OnTrackingFound ();
-			VideoPlaybackBehaviour currentVideo = FindObjectOfType<VideoPlaybackBehaviour>();
-			currentVideo.VideoPlayer.Play(false, 0);
+//			VideoPlaybackBehaviour[] currentVideos = FindObjectsOfType<VideoPlaybackBehaviour>();
+//			foreach (VideoPlaybackBehaviour video in currentVideos) {
+//				if(video.m_path.Contains (videoName))
+//					video.VideoPlayer.Play (false, 0);
+//			}
+//			Transform transform = GetComponent<Transform>();
+//			foreach (Transform child in transform) {
+//
+//			}
+			VideoPlaybackBehaviour video = GetComponentInChildren<VideoPlaybackBehaviour> ();
+			video.VideoPlayer.Play (false, 0);
 		}
+
+		override protected void OnTrackingLost()
+		{
+			base.OnTrackingLost ();
+			VideoPlaybackBehaviour video = GetComponentInChildren<VideoPlaybackBehaviour> ();
+			video.VideoPlayer.Pause ();
+		}
+
 	}
 }

@@ -145,7 +145,7 @@ namespace Vuforia
 		}
 
 
-		private void OnTrackingLost()
+		virtual protected void OnTrackingLost()
 		{
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
