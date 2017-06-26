@@ -1644,7 +1644,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.39276248}
+      m_Extent: {x: 0.5, y: 0, z: 0.39999998}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1696,7 +1696,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000002a18c9be00000000ffff7f3f000000000000000000000000000000bf000000002a18c93e00000000ffff7f3f00000000000000000000803f0000003f000000002a18c9be00000000ffff7f3f000000000000803f000000000000003f000000002a18c93e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: 000000bf00000000ccccccbe000000000000803f000000000000000000000000000000bf00000000cccccc3e000000000000803f00000000000000000000803f0000003f00000000ccccccbe000000000000803f000000000000803f000000000000003f00000000cccccc3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -5445,6 +5445,24 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 872616727}
+--- !u!1 &878073960 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1503242693109220, guid: a08b1da9fb7ba974a9dd0387b7f75605,
+    type: 2}
+  m_PrefabInternal: {fileID: 298396880}
+--- !u!114 &878073961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878073960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943024257eaf2ad4e803b8b0ed7f0325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childElements: []
+  waitTimes: []
 --- !u!1 &881130489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7643,7 +7661,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: jingmai_quanshenMaterial
+  m_Name: heart_movieMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -12517,6 +12535,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &2100460462 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1011341796550448, guid: a08b1da9fb7ba974a9dd0387b7f75605,
+    type: 2}
+  m_PrefabInternal: {fileID: 298396880}
+--- !u!114 &2100460463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2100460462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943024257eaf2ad4e803b8b0ed7f0325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childElements: []
+  waitTimes: []
 --- !u!1 &2107874126
 GameObject:
   m_ObjectHideFlags: 0

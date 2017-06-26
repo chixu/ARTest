@@ -20,9 +20,12 @@ public class XueGuanController : MonoBehaviour {
 	private Color showColor = Color.green;
 	private Color hideColor = Color.yellow;
 
+	void OnEnable(){
+		ShowDongMai (showDongMai);
+		ShowJingMai (showJingMai);
 
-	// Use this for initialization
-	void Awake () {
+		btnDongMai.onClick.RemoveAllListeners ();
+		btnJingMai.onClick.RemoveAllListeners ();
 		btnDongMai.onClick.AddListener(delegate() {  
 			this.OnBtnClick(btnDongMai.gameObject);   
 		}); 
@@ -30,11 +33,6 @@ public class XueGuanController : MonoBehaviour {
 		btnJingMai.onClick.AddListener(delegate() {  
 			this.OnBtnClick(btnJingMai.gameObject);   
 		}); 
-	}
-
-	void OnEnable(){
-		ShowDongMai (showDongMai);
-		ShowJingMai (showJingMai);
 	}
 
 	public void OnBtnClick(GameObject sender){
